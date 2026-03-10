@@ -285,7 +285,7 @@ export default function App() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[1, 2, 3].map((i) => (
               <div key={i} className="relative rounded-[2rem] border-4 border-gray-800 overflow-hidden bg-black h-[500px]">
-                <div className="absolute top-6 left-0 right-0 text-center z-10">
+                <div className="absolute top-6 left-0 right-0 text-center z-10 pointer-events-none">
                   <div className="bg-brand-pink text-white font-bold px-6 py-2 inline-block rounded-full text-sm shadow-[0_0_15px_rgba(255,105,180,0.5)]">
                     KUNDEN FEEDBACK
                   </div>
@@ -293,11 +293,36 @@ export default function App() {
                     Erfolge
                   </div>
                 </div>
-                <img src={`https://picsum.photos/seed/success${i}/400/800`} alt="Success proof" className="w-full h-full object-cover opacity-60" referrerPolicy="no-referrer" />
-                <div className="absolute bottom-6 right-6 text-brand-pink opacity-50">
+                
+                {i === 1 && (
+                  <iframe 
+                    src="https://drive.google.com/file/d/1QHGrMG8sb6PefqRCRb9OAsiVLoFgCrqZ/preview" 
+                    className="absolute top-0 left-0 w-[200%] h-[200%] border-0 opacity-90 origin-top-left scale-50"
+                    allow="autoplay; fullscreen"
+                    title="Kundenfeedback Video 1"
+                  ></iframe>
+                )}
+                {i === 2 && (
+                  <iframe 
+                    src="https://drive.google.com/file/d/1SNl0aTTfGaR8NxVWwrcFxwdXupodJDjZ/preview" 
+                    className="absolute top-0 left-0 w-[200%] h-[200%] border-0 opacity-90 origin-top-left scale-50"
+                    allow="autoplay; fullscreen"
+                    title="Kundenfeedback Video 2"
+                  ></iframe>
+                )}
+                {i === 3 && (
+                  <iframe 
+                    src="https://drive.google.com/file/d/1cCY6I7EDKw0YnbOueeQRArCKnKq_YeCS/preview" 
+                    className="absolute top-0 left-0 w-[200%] h-[200%] border-0 opacity-90 origin-top-left scale-50"
+                    allow="autoplay; fullscreen"
+                    title="Kundenfeedback Video 3"
+                  ></iframe>
+                )}
+
+                <div className="absolute bottom-6 right-6 text-brand-pink opacity-50 pointer-events-none">
                   <span className="text-6xl font-serif">"</span>
                 </div>
-                <div className="absolute bottom-6 left-0 right-0 text-center">
+                <div className="absolute bottom-6 left-0 right-0 text-center pointer-events-none">
                   <span className="text-xs font-bold tracking-widest text-brand-pink">SOCIALQUEENSCLUB</span>
                 </div>
               </div>
@@ -328,8 +353,13 @@ export default function App() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="flex flex-col md:flex-row gap-6 items-center">
-              <div className="w-48 h-64 rounded-2xl overflow-hidden shadow-xl shrink-0">
-                <img src="https://picsum.photos/seed/jenny/400/600" alt="Jenny" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <div className="w-[200px] aspect-[9/16] bg-black rounded-2xl overflow-hidden shadow-xl shrink-0 relative">
+                <iframe 
+                  src="https://drive.google.com/file/d/1Auq9sCGHKBzEjtG9XWqPXXwZddpwfya7/preview" 
+                  className="absolute top-0 left-0 w-[200%] h-[200%] border-0 origin-top-left scale-50"
+                  allow="autoplay; fullscreen"
+                  title="Jenny Video"
+                ></iframe>
               </div>
               <div className="text-sm leading-relaxed">
                 <p className="mb-4">
@@ -342,8 +372,13 @@ export default function App() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-center">
-              <div className="w-48 h-64 rounded-2xl overflow-hidden shadow-xl shrink-0">
-                <img src="https://picsum.photos/seed/karina/400/600" alt="Karina" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <div className="w-[200px] aspect-[9/16] bg-black rounded-2xl overflow-hidden shadow-xl shrink-0 relative">
+                <iframe 
+                  src="https://drive.google.com/file/d/1sXB9igY6ywZU9yK8nrMMfEflnn6gALss/preview" 
+                  className="absolute top-0 left-0 w-[200%] h-[200%] border-0 origin-top-left scale-50"
+                  allow="autoplay; fullscreen"
+                  title="Karina Video"
+                ></iframe>
               </div>
               <div className="text-sm leading-relaxed">
                 <p className="mb-4">
@@ -367,7 +402,7 @@ export default function App() {
       <section className="py-20 px-4 bg-black border-t border-gray-800">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <img src="https://picsum.photos/seed/both/600/800" alt="Jenny and Karina" className="rounded-xl shadow-2xl opacity-80" referrerPolicy="no-referrer" />
+            <img src="https://lh3.googleusercontent.com/d/191zLwPVygnFbrULJKmy8FljV-jfZwU2i" alt="Jenny and Karina" className="rounded-xl shadow-2xl opacity-80" referrerPolicy="no-referrer" />
             <div className="mt-8 flex justify-center">
               <div className="flex flex-col items-center">
                 <div className="flex items-center gap-2 text-green-500 font-bold text-xl mb-2">
