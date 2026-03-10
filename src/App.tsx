@@ -108,13 +108,18 @@ export default function App() {
 
           <div className="mt-16">
             <h3 className="text-3xl font-bold mb-8">UND SO <span className="text-brand-pink">GEHT´S</span></h3>
-            <div className="relative w-64 h-[450px] mx-auto rounded-[3rem] border-8 border-gray-800 overflow-hidden shadow-2xl shadow-brand-pink/20">
-              <img src="https://drive.google.com/file/d/1p_pBggPPTQSh9nZG1m-mth3xUoKoK6n8/view?usp=sharing" alt="Phone screen showing two women" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-              <div className="absolute bottom-8 left-0 right-0 text-center">
-                <span className="bg-white/90 text-black px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                  wenn du hier<br/>gelandet bist
-                </span>
-              </div>
+            <div className="relative w-full max-w-3xl mx-auto rounded-2xl border-4 border-gray-800 overflow-hidden shadow-2xl shadow-brand-pink/20 aspect-video">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/rpZLfWWWyRw?si=6VvVubq369XkStR8" 
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -164,12 +169,20 @@ export default function App() {
                 <div className="w-full lg:w-1/2">
                   <div className="relative rounded-2xl overflow-hidden border-4 border-gray-800 shadow-2xl aspect-[4/3] group">
                     <img 
-                      src="https://picsum.photos/seed/coffee/800/600" 
+                      src="https://drive.google.com/uc?export=view&id=14RjrP9ltdFD-tOXULHxq783d2qcL_Nee" 
                       alt="Digital Business mit System" 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                  <div className="flex justify-center gap-6 mt-6">
+                    <a href="https://www.instagram.com/kursauffreiheit" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-3 rounded-full text-brand-gold hover:bg-brand-gold hover:text-black transition-colors shadow-lg shadow-brand-gold/10">
+                      <Instagram className="w-6 h-6" />
+                    </a>
+                    <a href="https://www.tiktok.com/@lukimodus" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-3 rounded-full text-brand-gold hover:bg-brand-gold hover:text-black transition-colors shadow-lg shadow-brand-gold/10">
+                      <Music2 className="w-6 h-6" />
+                    </a>
                   </div>
                 </div>
                 <div className="w-full lg:w-1/2 space-y-8 text-center lg:text-left">
@@ -184,9 +197,14 @@ export default function App() {
                     mit System
                   </p>
                   <div className="pt-8">
-                    <button className="bg-white text-black font-bold text-lg py-4 px-10 rounded-full shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-105 transition-transform">
+                    <a 
+                      href="https://www.checkout-ds24.com/product/632632?aff=lukimodus" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-block bg-white text-black font-bold text-lg py-4 px-10 rounded-full shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-105 transition-transform"
+                    >
                       Jetzt starten
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -226,9 +244,14 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <button className="bg-white text-black font-bold text-xl py-4 px-8 rounded-full shadow-[0_0_20px_rgba(255,105,180,0.4)] hover:scale-105 transition-transform flex items-center gap-2 mx-auto md:mx-0">
+            <a 
+              href="https://www.checkout-ds24.com/product/632632?aff=lukimodus" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white text-black font-bold text-xl py-4 px-8 rounded-full shadow-[0_0_20px_rgba(255,105,180,0.4)] hover:scale-105 transition-transform flex items-center gap-2 mx-auto md:mx-0 w-fit"
+            >
               <span className="text-brand-pink text-2xl">🔗</span> Will ich haben!
-            </button>
+            </a>
           </div>
 
           <div className="space-y-4">
